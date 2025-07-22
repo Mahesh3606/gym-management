@@ -1,0 +1,119 @@
+<!-- diet.html -->
+<!-- Diet Plan Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diet Plans</title>
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+
+   <style>
+    body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  background-image: url("Photos/diet\ plan.jpg");
+}
+
+h1 {
+  text-align: center;
+  color: #240a0a;
+  margin-bottom: 30px;
+}
+
+section {
+  background-color: rgba(0, 0, 0, 0.6);
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  color: #c1ceda;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 95%;
+  height: 200px;
+  padding: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+  margin-bottom: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#savedDiet {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #f1f8ff;
+  
+  border-radius: 6px;
+  min-height: 50px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  section {
+    padding: 15px;
+  }
+
+  textarea {
+    height: 150px;
+    font-size: 0.95rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+   </style>
+   
+  <script type="module" src="js/diet.js" defer></script>
+</head>
+<body>
+  <h1>Nutrition & Diet Plans</h1>
+  <section>
+    <h2>Upload / View Diet Plans</h2>
+    <textarea id="dietPlan" placeholder="Enter meal plan here..."></textarea>
+    <button onclick="saveDietPlan()">Save Plan</button>
+    <div id="savedDiet"></div>
+  </section>
+</body>
+</html>
