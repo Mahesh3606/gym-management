@@ -1,0 +1,106 @@
+<!-- dashboard.html -->
+<!-- Admin Dashboard: Manage members, bills, packages -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="js/dashboard.js" defer></script>
+  <style>
+    /* Full-page background and layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://images.unsplash.com/photo-1590641936765-48ad738a7a63') no-repeat center center/cover;
+  color: #fff; 
+}
+
+/* Main container with semi-transparent background */
+.containers {
+  background-color: rgba(0, 0, 0, 0.7); /* glass effect */
+  padding: 40px;
+  border-radius: 25px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 20px;
+  height: auto;
+}
+
+/* Headings */
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+/* Form inputs and button */
+form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #fff;
+  color: #f1ecec;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00c9a7;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+  height: 40px;
+}
+
+form button:hover {
+  background-color: #009f87;
+}
+
+/* Member list styling */
+#memberList {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#memberList li {
+  background: #fff;
+  color: #000;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="containers">
+  <h1>Admin Dashboard</h1>
+  <section class="NewMember">
+    <h2>Add New Member</h2>
+    <form id="addMemberForm">
+      <input type="text" placeholder="Member Name" required id="memberName">
+      <input type="email" placeholder="Email" required id="memberEmail"><br>
+      <button type="submit">Add Member</button><br><br>
+    </form>
+  </section>
+  <section >
+    <h2>Members List</h2>
+    <ul id="memberList"></ul>
+  </section>
+  </div>
+</body>
+</html>
